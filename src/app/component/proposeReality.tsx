@@ -8,8 +8,8 @@ import "aos/dist/aos.css";
 const RIGHT_IMAGE_URL =
   "https://plus.unsplash.com/premium_photo-1680608979589-e9349ed066d5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8QWl8ZW58MHx8MHx8fDA%3D";
 
-/** Teal accent — matches design reference */
-const COGNITIVE_TEAL = "#00BCD4";
+/** Accent matches header cyan exactly */
+const COGNITIVE_TEAL = "#19B6C9";
 
 type CognitivePillar = {
   openTitle: string;
@@ -61,18 +61,8 @@ const COGNITIVE_PILLARS: CognitivePillar[] = [
     verticalText:
       "Learning-Driven Management ensures continuous intelligence growth",
   },
-  {
-    openTitle: "Learning-Driven\nManagement",
-    openBody:
-      "Learning-Driven Management ensures continuous intelligence growth.",
-    verticalText:
-      "Learning-Driven Management ensures continuous intelligence growth",
-  },
-  {
-    openTitle: "Business\nIntelligence",
-    openBody: "Business Intelligence transforms data into strategic wisdom.",
-    verticalText: "Business Intelligence transforms data into strategic wisdom",
-  },
+  
+  
 ];
 
 export default function ProposeReality() {
@@ -108,7 +98,6 @@ export default function ProposeReality() {
         <div className="pointer-events-none absolute inset-0 opacity-90">
           <div className="absolute left-0 top-0 h-full w-full" />
         </div>
-
         <div className="relative mx-auto grid w-full max-w-6xl items-center gap-10 px-6 py-14 md:grid-cols-[1.15fr_0.85fr]">
           <div data-aos="fade-up" className="max-w-[720px]">
             <h2 className="text-[40px]  leading-[1.05] tracking-tight md:text-[46px]">

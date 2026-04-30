@@ -92,7 +92,7 @@ export default function ProposeReality() {
     <>
       {/* Section 1 */}
       <section
-        className="strip-bg relative w-full overflow-hidden bg-[#151414] text-white"
+        className="strip-bg relative w-full overflow-hidden bg-[#151518] text-white"
         aria-label="We Propose a New Reality"
       >
         <div className="pointer-events-none absolute inset-0 opacity-90">
@@ -154,7 +154,7 @@ export default function ProposeReality() {
       <section
         id="section-2"
         aria-labelledby="cognitive-architecture-heading"
-        className="strip-bg relative w-full bg-[#151414] px-6 py-12 text-white md:py-16"
+        className="strip-bg relative w-full bg-[#151518] px-6 py-12 text-white md:py-16"
       >
         <div className="relative mx-auto w-full max-w-6xl">
           <h2 id="cognitive-architecture-heading" className="sr-only">

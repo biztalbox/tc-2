@@ -20,10 +20,9 @@ const COGNITIVE_PILLARS: CognitivePillar[] = [
   {
     openTitle: "The Cognitive\nArchitecture",
     openBody:
-      "ZerofAI operates across six revolutionary pillars, each representing a fundamental reimagining of enterprise IT. Together, they form an interconnected intelligence that grows more powerful with every microsecond of operation.",
+      "ZerofAI operates across six revolutionary pillars, each representing a fundamental reimagining of enterprise IT.",
     imageSrc:
-    "https://plus.unsplash.com/premium_photo-1676637656166-cb7b3a43b81a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YWl8ZW58MHx8MHx8fDA%3D",
-  },
+"https://plus.unsplash.com/premium_photo-1682756540097-6a887bbcf9b0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGFpfGVufDB8fDB8fHww",  },
   {
     openTitle: "Response-Driven\nAssistance",
     openBody:
@@ -191,8 +190,8 @@ export default function ProposeReality() {
 
           {/* Desktop: edge-to-edge columns */}
           <div data-aos="fade-up" className="flex min-h-[280px] w-full min-w-0 flex-col lg:min-h-0">
-            <div className="relative hidden h-[520px] w-full min-w-0 lg:block lg:h-[560px]">
-              <div className="flex h-full w-full overflow-hidden bg-[#0d0d10]">
+            <div className="relative hidden min-h-[580px] w-full min-w-0 lg:block lg:h-[min(78vh,880px)]">
+              <div className="flex h-full min-h-[580px] w-full overflow-hidden bg-[#0d0d10]">
                 {pillars.map((p, idx) => {
                   const isActive = pillarActive === idx;
                   const titleOneLine = p.openTitle.replaceAll("\n", " ");
@@ -227,7 +226,7 @@ export default function ProposeReality() {
 
                       <div
                         className={[
-                          "absolute inset-0 flex min-h-0 flex-col overflow-hidden p-6 sm:p-8",
+                          "absolute inset-0 flex min-h-0 flex-col overflow-hidden px-6 pt-6 pb-14 sm:px-8 sm:pt-8 sm:pb-16",
                           isActive
                             ? "pointer-events-auto opacity-100"
                             : "pointer-events-none opacity-0",
@@ -249,13 +248,13 @@ export default function ProposeReality() {
 
                         <div
                           className={[
-                            "mt-auto min-h-0 shrink-0 pt-20 transition-[opacity,transform] duration-[560ms] ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform motion-reduce:transition-opacity motion-reduce:duration-200",
+                            "mt-auto min-h-0 shrink-0 pt-16 transition-[opacity,transform] duration-[560ms] ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform motion-reduce:transition-opacity motion-reduce:duration-200 sm:pt-20",
                             isActive
                               ? "translate-x-0 opacity-100 delay-150 motion-reduce:delay-0"
                               : "translate-x-16 opacity-0 delay-0",
                           ].join(" ")}
                         >
-                          <div className="relative h-[200px] w-full overflow-hidden rounded-xl bg-black/40 shadow-[0_16px_48px_rgba(0,0,0,0.45)] ring-1 ring-[#19B6C9]/25 sm:h-[244px]">
+                          <div className="relative h-[220px] w-full overflow-hidden rounded-xl bg-black/40 shadow-[0_16px_48px_rgba(0,0,0,0.45)] ring-1 ring-[#19B6C9]/25 sm:h-[260px] lg:h-[min(32vh,320px)] lg:min-h-[220px]">
                             <Image
                               src={p.imageSrc}
                               alt={titleOneLine}

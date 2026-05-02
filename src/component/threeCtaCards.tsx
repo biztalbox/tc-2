@@ -19,13 +19,13 @@ const CARDS: Card[] = [
     buttonNote: "Schedule a 15-minute executive briefing.",
   },
   {
-    title: "Request Economic Transforma-\ntion Model",
+    title: "Request Economic Transformation Model",
     body: "Receive an AI-calculated ROI projection specific to your enterprise. Discover precisely how much you’ll redirect from maintenance to market-disrupting innovation.",
     button: "Request immer...",
     buttonNote: "Receive your ROI projection within 24 hours.",
   },
   {
-    title: "Join the Cognitive Enterprise\nConsortium",
+    title: "Join the Cognitive Enterprise",
     body: "Access an exclusive, limited-seat think tank for organizations pioneering autonomous operations. Shape the future with fellow revolutionaries and gain unparalleled insights.",
     button: "Request immer...",
     buttonNote: "Limited seats. By invitation only.",
@@ -39,13 +39,13 @@ function CardItem({ card, idx }: { card: Card; idx: number }) {
       data-aos-delay={idx * 120}
       className="group relative"
     >
-      <div className="rounded-[18px] bg-white/4 p-px shadow-[0_20px_55px_rgba(0,0,0,0.65)] transition-transform duration-300 ease-out group-hover:-translate-y-1">
-        <div className="rounded-[18px] bg-[#0B0B0B] px-7 py-10 ring-1 ring-white/10">
-          <h3 className="whitespace-pre-line text-center text-[15px] font-extrabold leading-6 tracking-tight text-white">
+      <div className="rounded-[18px] bg-white/4 p-px shadow-lg dark:shadow-none transition-transform duration-300 ease-out group-hover:-translate-y-1">
+        <div className="rounded-[18px] bg-secondary dark:bg-secondary/40 px-7 py-10 ring-1">
+          <h4 className="text-center">
             {card.title}
-          </h3>
+          </h4>
 
-          <div className="mx-auto mt-4 h-[3px] w-14 rounded-full bg-white/70" />
+          <div className="mx-auto mt-4 h-[3px] w-14 rounded-full bg-foreground" />
 
           <p className="mx-auto mt-6 max-w-[290px] text-center text-[12px] leading-6 text-white/35">
             {card.body}
@@ -58,7 +58,7 @@ function CardItem({ card, idx }: { card: Card; idx: number }) {
         data-aos-delay={idx * 120 + 220}
         className="mt-10 flex flex-col items-center"
       >
-        <button className="h-[44px] w-[220px] rounded-[2px] border border-white/45 bg-transparent text-[13px] font-semibold text-white/80 shadow-[0_16px_35px_rgba(0,0,0,0.55)] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#19B6C9] hover:bg-[#19B6C9] hover:text-black active:translate-y-px">
+        <button className="rounded-full px-5 py-2.5 border border-white/45 bg-foreground text-[13px] font-semibold text-background transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#19B6C9] hover:bg-[#19B6C9] hover:text-black active:translate-y-px">
           {card.button}
         </button>
 
@@ -82,8 +82,8 @@ export default function ThreeCtaCards() {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#050505] text-white">
-      <div className="mx-auto w-full max-w-6xl px-6 pb-20 pt-6">
+    <section className="py-20">
+      <div className="container">
         <div className="grid gap-8 md:grid-cols-3 md:gap-10">
           {CARDS.map((card, idx) => (
             <CardItem key={idx} card={card} idx={idx} />

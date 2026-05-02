@@ -76,7 +76,7 @@ function StickyHeader() {
   }
 
   return (
-    <header className="py-4 sticky top-0 z-50">
+    <header className="py-4 sticky top-0 z-50 bg-background border-b">
 
       <div className="container flex items-center justify-between gap-4">
         {/* logo */}

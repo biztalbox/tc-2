@@ -30,7 +30,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn("h-full", "antialiased", "overflow-x-hidden", poppins.variable, "font-sans", geist.variable)}
     >
-      <body className="min-h-full flex flex-col overflow-x-hidden">
+      <body>
         <Header />
         {children}
         <Footer />

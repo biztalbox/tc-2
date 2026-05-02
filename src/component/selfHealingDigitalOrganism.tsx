@@ -13,7 +13,7 @@ type Card = {
 
 function IconBadge({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#19B6C9] text-black shadow-[0_10px_24px_rgba(0,0,0,0.35)] ring-1 ring-white/10">
+    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#19B6C9] text-black ring-1 ring-white/10">
       {children}
     </div>
   );
@@ -69,8 +69,8 @@ export default function SelfHealingDigitalOrganism() {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#050505] text-white">
-      <div className="mx-auto w-full max-w-6xl px-6 py-20">
+    <section className="py-20">
+      <div className="container">
         <div className="text-center">
           <h2
             data-aos="fade-left"
@@ -80,7 +80,7 @@ export default function SelfHealingDigitalOrganism() {
           </h2>
 
           <div data-aos="fade-left" className="mt-5 flex justify-center">
-            <div className="rounded-full bg-[#19B6C9] px-6 py-2 text-xs font-semibold tracking-wide text-white shadow-[0_16px_40px_rgba(0,0,0,0.55)] ring-1 ring-white/10">
+            <div className="rounded-full bg-[#19B6C9] px-6 py-2 text-xs font-semibold tracking-wide text-white ring-1 ring-white/10">
               Autonomous Issue Management
             </div>
           </div>
@@ -102,20 +102,21 @@ export default function SelfHealingDigitalOrganism() {
               key={`${c.title}-${i}`}
               data-aos="fade-up"
               data-aos-delay={i * 120}
-              className="card-shadow group relative rounded-[18px] bg-white/6 p-2 ring-1 ring-white/10 transition-[background-color,box-shadow,ring-color,ring-width] duration-300 ease-in-out hover:bg-white hover:ring-2 hover:bounda-black"
+              className="group relative rounded-xl bg-secondary p-2 transition-[background-color,box-shadow,ring-color,ring-width] duration-300 ease-in-out"
             >
-              <div className="hover:border-black hover:ring-2 hover:ring-black rounded-sm p-1">             <div className="flex items-start justify-between gap-4">
-                {c.icon}
-                <div className="pt-1 text-right">
-                  <p className="text-sm font-extrabold text-white/90 transition-colors duration-300 ease-in-out group-hover:text-black">
-                    {c.title}
-                  </p>
+              <div className="hover:border-black hover:ring-1 hover:ring-black dark:hover:ring-white rounded-xl flex flex-col gap-4 p-2">
+                <div className="flex items-start gap-4">
+                  {c.icon}
+                  <div className="text-right">
+                    <p className="text-sm font-extrabold text-white/90 transition-colors duration-300 ease-in-out group-hover:text-black">
+                      {c.title}
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              <p className="mt-5 text-sm leading-7 text-white/80 transition-colors duration-300 ease-in-out group-hover:text-black/70">
-                {c.body}
-              </p>
+                <p>
+                  {c.body}
+                </p>
               </div>
 
               <div className="pointer-events-none absolute inset-0 rounded-[18px]" />

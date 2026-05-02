@@ -16,12 +16,11 @@ export default function JoinAutonomousRevolution() {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#050505] text-white">
-      <div className="mx-auto w-full max-w-6xl px-6 pb-24 pt-24">
+    <section className="py-20">
+      <div className="container">
         <div className="text-center">
           <h2
             data-aos="fade-up"
-            className="text-[32px] font-extrabold leading-[1.05] tracking-tight md:text-[44px]"
           >
             Join the Autonomous Revolution. Lead,
             <br />
@@ -40,7 +39,7 @@ export default function JoinAutonomousRevolution() {
         <div
           data-aos="zoom-in"
           data-aos-delay="140"
-          className="relative mx-auto mt-16 max-w-6xl rounded-[22px] border border-white/35 bg-white/2 px-7 py-10 shadow-[0_26px_70px_rgba(0,0,0,0.65)] md:px-16 md:py-14"
+          className="relative mx-auto mt-16 max-w-6xl rounded-[22px] border border-white/35 bg-white/2 px-7 py-10 md:px-16 md:py-14"
         >
           <div className="mx-auto max-w-5xl text-center">
             <p className="text-[12px] leading-7 text-white/35 md:text-[13px] md:leading-7">
@@ -86,7 +85,7 @@ export default function JoinAutonomousRevolution() {
         <div
           data-aos="fade-up"
           data-aos-delay="220"
-          className="mx-auto mt-12 h-[4px] w-full max-w-4xl rounded-full bg-[#19B6C9] shadow-[0_10px_30px_rgba(0,0,0,0.55)]"
+          className="mx-auto mt-12 h-[4px] w-full max-w-4xl rounded-full bg-[#19B6C9]"
         />
       </div>
     </section>

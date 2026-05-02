@@ -57,9 +57,9 @@ export default function Autonomous() {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden bg-black text-white">
-      <div className="relative mx-auto w-full max-w-6xl px-6 py-16">
-        <h2 className="text-center text-[30px] font-extrabold tracking-tight md:text-[36px]">
+    <section className="bg-black py-16">
+      <div className="container">
+        <h2 className="text-center text-white">
           Autonomous Service Consciousness
         </h2>
 
@@ -117,10 +117,10 @@ export default function Autonomous() {
                   >
                     {/* text */}
                     <div className="min-w-0 flex-1">
-                      <p className="truncate text-[18px] font-extrabold tracking-tight text-white md:text-[20px]">
+                      <h5 className="truncate text-[18px] font-bold text-white md:text-[20px]">
                         {r.title}
-                      </p>
-                      <p className="mt-1 text-[12px] leading-5 text-white/45 md:text-[13px]">
+                      </h5>
+                      <p className="mt-1 text-[12px] leading-5 text-white/30 md:text-[13px]">
                         {r.subtitle}
                       </p>
                     </div>

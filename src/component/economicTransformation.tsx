@@ -40,10 +40,10 @@ function StatCard({
   const barBg = variant === "muted" ? "bg-[#003E35]" : "bg-[#0b4a53]";
 
   return (
-    <div className="mx-auto flex h-full w-full min-w-0 max-w-[240px] flex-col items-center sm:max-w-none lg:w-[220px] lg:max-w-none xl:w-[230px]">
+    <div className="mx-auto flex h-full w-full min-w-0 flex-col items-center sm:max-w-none  lg:max-w-none">
       <div
         className={[
-          "relative z-10 w-[min(48%,4rem)] min-w-13 max-w-17 overflow-hidden rounded-t-[12px] text-center shadow-[0_10px_32px_rgba(0,0,0,0.42)]",
+          "relative z-10 w-24 overflow-hidden text-center",
           STAT_BAR_HEIGHT_CLASS,
           barBg,
         ].join(" ")}
@@ -54,24 +54,23 @@ function StatCard({
           className={[
             "absolute bottom-0 left-0 right-0 h-0 will-change-[height]",
             "bg-[linear-gradient(180deg,#23D3E8_0%,#19B6C9_60%,#118DA0_100%)]",
-            "shadow-[0_-10px_28px_rgba(25,182,201,0.30)]",
           ].join(" ")}
           aria-hidden
         />
 
-        <span
+        <h4
           ref={setTextRef(index)}
           data-count-target={typeof item.value === "number" ? `${item.value}` : ""}
-          className="absolute inset-0 flex items-center justify-center text-[clamp(1.15rem,3.2vw,1.55rem)] font-extrabold leading-none tracking-tight text-white"
+          className="absolute inset-0 flex items-center justify-center text-7xl font-extrabold leading-none text-white"
           style={{ willChange: "contents, opacity" }}
         >
           {item.value === "infinity" ? "∞" : `${item.value}%`}
-        </span>
+        </h4>
       </div>
 
-      <div className="relative -mt-px flex w-full flex-1 overflow-hidden rounded-[12px] border border-white/8 bg-[#121212] shadow-[0_14px_40px_rgba(0,0,0,0.48)]">
+      <div className="relative -mt-px flex w-full flex-1 overflow-hidden rounded border border-white/8 bg-secondary dark:bg-secondary/40">
         <div className="w-[7px] shrink-0 bg-[#19B6C9]" aria-hidden />
-        <div className="flex min-h-[118px] min-w-0 flex-1 flex-col justify-center px-3 pb-5 pt-5 text-center lg:min-h-[128px] lg:px-3.5 lg:pt-6">
+        <div className="flex flex-1 flex-col justify-center text-center p-4">
           <p className="text-[11px] font-extrabold leading-snug tracking-wide text-white lg:text-[11.5px]">
             {item.label}
           </p>
@@ -245,20 +244,18 @@ export default function EconomicTransformation() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full overflow-hidden bg-[#050505] text-white"
+      className="py-20"
     >
-      <div className="mx-auto w-full max-w-6xl px-6 py-20">
+      <div className="container">
         <div className="text-center">
           <h2
             data-aos="fade-up"
-            className="text-[34px] font-extrabold tracking-tight md:text-[44px]"
           >
             The Economic Transformation
           </h2>
           <div
-            data-aos="zoom-in"
-            data-aos-delay="120"
-            className="mx-auto mt-5 inline-flex items-center rounded-full bg-[#19B6C9] px-6 py-2 text-[12px] font-semibold text-white shadow-[0_14px_35px_rgba(0,0,0,0.55)]"
+            data-aos="fade-up"
+            className="mx-auto mt-5 inline-flex items-center rounded-full bg-[#19B6C9] px-6 py-2 text-[12px] font-semibold text-white"
           >
             From Cost Center to Revenue Architect
           </div>
@@ -322,7 +319,7 @@ export default function EconomicTransformation() {
           </div>
         </div>
 
-        <div className="mx-auto mt-14 grid w-full max-w-[980px] grid-cols-1 items-stretch gap-8 sm:grid-cols-2 sm:gap-6 lg:mt-16 lg:grid-cols-4 lg:justify-items-center lg:gap-4 xl:gap-5">
+        <div className="mx-auto mt-14 grid w-full grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6 lg:mt-16 lg:grid-cols-4 lg:justify-items-center lg:gap-4 xl:gap-5">
           {stats.map((item, idx) => (
             <StatCard
               key={item.label}

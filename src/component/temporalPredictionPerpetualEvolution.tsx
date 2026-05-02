@@ -22,8 +22,8 @@ export default function TemporalPredictionPerpetualEvolution() {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#050505] text-white">
-      <div className="mx-auto w-full max-w-6xl px-6 py-20">
+    <section className="py-20 bg-secondary dark:bg-secondary/40">
+      <div className="container">
         <div className="text-center">
           <h2
             data-aos="fade-up"
@@ -31,7 +31,7 @@ export default function TemporalPredictionPerpetualEvolution() {
           >
             Temporal Prediction &amp; Perpetual Evolution
           </h2>
-          
+
           <p
             data-aos="fade-up"
             data-aos-delay="100"
@@ -44,7 +44,7 @@ export default function TemporalPredictionPerpetualEvolution() {
           </p>
           <div
             data-aos="fade-up"
-            data-aos-delay="75"
+            data-aos-delay="100"
             className="mx-auto mt-5 h-[2px] w-90 rounded-full bg-[#19B6C9]"
           />
         </div>
@@ -53,8 +53,8 @@ export default function TemporalPredictionPerpetualEvolution() {
           {/* Top row */}
           <div className="grid items-center gap-10 md:grid-cols-[1fr_1.05fr]">
             <div
-              data-aos="fade-left"
-              className="relative mx-auto h-[220px] w-full max-w-[520px] overflow-hidden rounded-[6px] bg-[#19B6C9] shadow-[0_18px_50px_rgba(0,0,0,0.55)] md:h-[250px]"
+              data-aos="fade-right"
+              className="relative mx-auto h-[220px] w-full max-w-[520px] overflow-hidden rounded-[6px] bg-[#19B6C9] md:h-[250px]"
             >
               <Image
                 src={TOP_IMAGE}
@@ -65,7 +65,7 @@ export default function TemporalPredictionPerpetualEvolution() {
               />
             </div>
 
-            <div data-aos="fade-right" className="text-white/40">
+            <div data-aos="fade-left" className="text-white/40">
               <p className="text-xs font-extrabold tracking-wide text-[#19B6C9]">
                 The Temporal Prediction Matrix
               </p>
@@ -92,7 +92,7 @@ export default function TemporalPredictionPerpetualEvolution() {
 
           {/* Bottom row */}
           <div className="grid items-center gap-10 md:grid-cols-[1.05fr_1fr]">
-            <div data-aos="fade-left" className="order-2 text-right md:order-1">
+            <div data-aos="fade-right" className="order-2 text-right md:order-1">
               <p className="text-xs font-extrabold tracking-wide text-[#19B6C9]">
                 The Perpetual Evolution Engine
               </p>
@@ -114,8 +114,8 @@ export default function TemporalPredictionPerpetualEvolution() {
             </div>
 
             <div
-              data-aos="fade-right"
-              className="order-1 relative mx-auto h-[220px] w-full max-w-[520px] overflow-hidden rounded-[6px] bg-[#19B6C9] shadow-[0_18px_50px_rgba(0,0,0,0.55)] md:order-2 md:h-[250px]"
+              data-aos="fade-left"
+              className="order-1 relative mx-auto h-[220px] w-full max-w-[520px] overflow-hidden rounded-[6px] bg-[#19B6C9] md:order-2 md:h-[250px]"
             >
               <Image
                 src={BOTTOM_IMAGE}

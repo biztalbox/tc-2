@@ -101,9 +101,7 @@ export default function ImplementationChronology() {
             phase="Phase 3"
             title="Cognitive Dominance"
             day="Day 180"
-            body="Temporal prediction matrices reveal future states with unprecedented accuracy. Strategic intelligence canvases deliver executive insights that reshape business strategy. Perpetual evolution engine reaches full activation—your platform now improves
-itself faster than human teams ever
-could. You've achieved true enterprise consciousness"
+            body="Temporal prediction matrices reveal future states with unprecedented accuracy. Strategic intelligence canvases deliver executive insights that reshape business strategy. Perpetual evolution engine reaches full activation—your platform now improves itself faster than human teams ever could. You've achieved true enterprise consciousness"
             delay={240}
           />
         </div>

@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import AOS from "aos";
 import "aos/dist/aos.css";
 
 const RIGHT_IMAGE_URL =
@@ -61,8 +60,8 @@ const COGNITIVE_PILLARS: CognitivePillar[] = [
     verticalText:
       "Learning-Driven Management ensures continuous intelligence growth",
   },
-  
-  
+
+
 ];
 
 export default function ProposeReality() {
@@ -79,35 +78,32 @@ export default function ProposeReality() {
     }, 220);
   }, []);
 
-  useEffect(() => {
-    AOS.init({
-      duration: 700,
-      easing: "ease-out-cubic",
-      offset: 120,
-      once: false,
-    });
-  }, []);
-
   return (
     <>
       {/* Section 1 */}
       <section
-        className="strip-bg relative w-full overflow-hidden bg-[#151518] text-white"
-        aria-label="We Propose a New Reality"
+        className="bg-secondary dark:bg-secondary/40 py-20"
       >
-        <div className="pointer-events-none absolute inset-0 opacity-90">
-          <div className="absolute left-0 top-0 h-full w-full" />
-        </div>
-        <div className="relative mx-auto grid w-full max-w-6xl items-center gap-10 px-6 py-14 md:grid-cols-[1.15fr_0.85fr]">
-          <div data-aos="fade-up" className="max-w-[720px]">
-            <h2 className="text-[40px]  leading-[1.05] tracking-tight md:text-[46px]">
+        <div className="container grid grid-cols-1 md:grid-cols-2 place-items-center gap-10">
+          <div className="w-fit place-self-start relative">
+            <Image
+              width={500}
+              height={500}
+              src={RIGHT_IMAGE_URL}
+              alt="AI and human hand"
+              className="rounded-lg w-full h-full object-cover"
+            />
+          </div>
+
+          <div className="">
+            <h2>
               We Propose a New Reality
             </h2>
-            <p className="mt-3 text-[17px] font-medium text-white">
+            <p>
               Autonomous Enterprise Consciousness
             </p>
 
-            <div className="mt-7 space-y-4 text-sm leading-6 text-white/70">
+            <div className="mt-7 space-y-4">
               <p>
                 Imagine an IT infrastructure that breathes, thinks, and evolves.
                 Not automation—true autonomy. Your digital ecosystem develops its
@@ -123,30 +119,16 @@ export default function ProposeReality() {
               </p>
             </div>
 
-            <div className="mt-8 h-[3px] w-[520px] max-w-full bg-[#19B6C9]" />
+            <div className="mt-8 h-1 max-w-full bg-primary" />
 
-            <p className="mt-6 max-w-[700px] text-xs leading-6 text-white/70">
+            <p className="mt-6 text-xs leading-6 text-neutral-700 dark:text-white/70">
               “What if every ticket prevented itself? What if every incident
               resolved before the user knew? What if your IT budget shifted from
               maintenance to innovation?”
             </p>
           </div>
 
-          <div
-            data-aos="fade-left"
-            className="mx-auto w-full max-w-[360px] rounded-sm bg-[#19B6C9] p-0 shadow-[0_18px_50px_rgba(0,0,0,0.55)]"
-          >
-            <div className="relative h-[400px] w-full overflow-hidden sm:h-[460px] md:h-[520px]">
-              <Image
-                src={RIGHT_IMAGE_URL}
-                alt="AI and human hand"
-                fill
-                priority={false}
-                className="object-cover"
-                sizes="(max-width: 768px) 90vw, 360px"
-              />
-            </div>
-          </div>
+
         </div>
       </section>
 
@@ -154,15 +136,15 @@ export default function ProposeReality() {
       <section
         id="section-2"
         aria-labelledby="cognitive-architecture-heading"
-        className="strip-bg relative w-full bg-[#151518] px-6 py-12 text-white md:py-16"
+        className="strip-bg relative w-full bg-secondary dark:bg-secondary/40 px-6 py-12 text-neutral-900 md:py-16 dark:text-white"
       >
-        <div className="relative mx-auto w-full max-w-6xl">
+        <div className="container">
           <h2 id="cognitive-architecture-heading" className="sr-only">
             The Cognitive Architecture
           </h2>
 
           {/* Intro column is now pillar 0 (same style/behavior as others). */}
-          <div data-aos="fade-up" className="flex min-h-[280px] w-full min-w-0 flex-col lg:min-h-0">
+          <div className="flex min-h-[280px] w-full min-w-0 flex-col lg:min-h-0">
             <div
               className="relative hidden h-[520px] w-full min-w-0 overflow-hidden lg:block lg:h-[560px]"
             >
@@ -175,7 +157,7 @@ export default function ProposeReality() {
                       onMouseEnter={() => setPillarActiveSmooth(idx)}
                       className={[
                         // keep a divider before the first pillar too (like screenshot)
-                        "group relative h-full border-l border-white/20 transition-[flex-basis,background-color] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]",
+                        "group relative h-full border-l border-black/15 transition-[flex-basis,background-color] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] dark:border-white/20",
                         isActive
                           ? "basis-[min(360px,42vw)] shrink-0 "
                           : "basis-0 grow bg-transparent min-w-[72px] sm:min-w-[84px]",
@@ -191,7 +173,7 @@ export default function ProposeReality() {
                         ].join(" ")}
                       >
                         <p
-                          className="max-h-[92%] text-center text-[10px] font-semibold leading-snug text-white/75 [writing-mode:vertical-rl] rotate-180 sm:text-[11px] xl:text-[12px]"
+                          className="max-h-[92%] text-center text-[10px] font-semibold leading-snug text-neutral-700 [writing-mode:vertical-rl] rotate-180 dark:text-white/75 sm:text-[11px] xl:text-[12px]"
                           style={{ textOrientation: "mixed" }}
                         >
                           {p.verticalText}
@@ -207,10 +189,10 @@ export default function ProposeReality() {
                             : "pointer-events-none -translate-x-2 opacity-0",
                         ].join(" ")}
                       >
-                        <h3 className="whitespace-pre-line text-[clamp(28px,4vw,42px)] font-extrabold leading-[1.05] tracking-tight text-white">
+                        <h3 className="whitespace-pre-line text-[clamp(28px,4vw,42px)] font-extrabold leading-[1.05] tracking-tight text-neutral-900 dark:text-white">
                           {p.openTitle}
                         </h3>
-                        <p className="mt-4 text-sm leading-6 text-white/45">{p.openBody}</p>
+                        <p className="mt-4 text-sm leading-6 text-neutral-600 dark:text-white/45">{p.openBody}</p>
                         <div
                           className="mt-6 h-[220px] w-full rounded-[4px] sm:mt-8 sm:h-[260px]"
                           style={{ backgroundColor: COGNITIVE_TEAL }}
@@ -232,14 +214,16 @@ export default function ProposeReality() {
                     type="button"
                     onClick={() => setPillarActive(idx)}
                     className={[
-                      "w-full rounded-[14px] bg-white/6 px-5 py-4 text-left ring-1 ring-white/15 transition-colors",
-                      isActive ? "bg-white/10" : "hover:bg-white/80",
+                      "w-full rounded-[14px] bg-black/[0.06] px-5 py-4 text-left ring-1 ring-black/10 transition-colors dark:bg-white/6 dark:ring-white/15",
+                      isActive
+                        ? "bg-black/10 dark:bg-white/10"
+                        : "hover:bg-black/[0.08] dark:hover:bg-white/80",
                     ].join(" ")}
                   >
-                    <p className="text-[15px] font-extrabold text-white/95">
+                    <p className="text-[15px] font-extrabold text-neutral-900 dark:text-white/95">
                       {p.openTitle.replaceAll("\n", " ")}
                     </p>
-                    <p className="mt-2 text-sm leading-6 text-white/45">{p.openBody}</p>
+                    <p className="mt-2 text-sm leading-6 text-neutral-600 dark:text-white/45">{p.openBody}</p>
                   </button>
                 );
               })}

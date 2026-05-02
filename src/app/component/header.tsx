@@ -303,7 +303,7 @@ export default function Header({
 
         <div className="mt-8 flex flex-wrap items-center gap-6 sm:mt-10 sm:gap-10">
           <button className="rounded-full bg-white px-7 py-3 text-sm font-semibold text-black shadow-[0_18px_35px_rgba(0,0,0,0.45)] hover:bg-white/95 active:bg-white/90">
-            Experience the Revolution
+            Book Demo
           </button>
 
           <button className="text-sm font-semibold text-[#19B6C9] underline underline-offset-10 decoration-[#19B6C9]/60 hover:text-[#3ed6e6] hover:decoration-[#3ed6e6]/70">
